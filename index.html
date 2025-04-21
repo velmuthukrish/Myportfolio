@@ -19,28 +19,33 @@
       </head>    
 <body>
     <section class="hero">
-  <div class="hero-content">
-    <img src="vel_photo.jpg" alt="Velkumaresan Muthukrishnan" class="profile-pic">
-    <h1>Hello, I'm Velkumaresan</h1>
-    <p>Azure, IT Infrastructure & Cloud Specialist</p>
-    <a href="#contact" class="hero-button">Get in Touch</a>
-      <a href="Velkumaresan_Muthukrishnan_Azure.pdf" download class="hero-button"">Download My CV</a>
-  </div>
-</section>
+        <div class="hero-content">
+          <img src="images/vel_photo.jpg" alt="Velkumaresan Muthukrishnan" class="profile-pic">
+          <h1>Hello, I'm Velkumaresan</h1>
+          <p>Azure, IT Infrastructure & Cloud Specialist</p>
+          <a href="#contact" class="hero-button">Get in Touch</a>
+        <a href="Velkumaresan_Muthukrishnan_Azure.pdf" download class="hero-button">Download My CV</a>
+        </div>
+      </section>
   <header>
     <div class="container">
-        <nav id="navbar">
-  <div class="logo">Vel's Portfolio</div>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+        <nav class="navbar">
+            <div class="logo">Velkumaran.tech</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
+                <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </nav>
       </div>
   </header>
-
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <section id="about">
     <h2>About Me</h2>
     <p>I am a passionate IT professional with expertise in Azure cloud services, infrastructure development, and virtualization. Currently working as Team Lead - Tech Service at Dynamic Computer Service, I lead successful cloud projects and migrations that enhance business efficiency.</p>
@@ -98,7 +103,7 @@
   </div>
   </section>
   <section id="projects">
-     <h2>My Projects</h2>
+    <h2>My Projects</h2>
   <div class="projects-container">
     <div class="project-card">
       <img src="images/azure_project.png" alt="Azure Project Icon">
@@ -129,14 +134,42 @@
 
   <!-- More sections coming soon -->
 
- <footer>
-  <p>Connect with me:</p>
-  <div class="social-icons">
-    <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
-  </div>
-  <p>&copy; 2025 Velkumaresan Muthukrishnan. All rights reserved.</p>
-</footer>
+  <footer>
+    <p>Connect with me:</p>
+    <div class="social-icons">
+      <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>&copy; 2025 Velkumaresan Muthukrishnan. All rights reserved.</p>
+  </footer>
 </body>
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const hamburger = document.querySelector(".hamburger");
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("active");
+  }
+  
+  // Active Link Highlight on Scroll
+  window.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+  
+    let current = "";
+  
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 80;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+  
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
 </html>
