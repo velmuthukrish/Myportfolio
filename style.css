@@ -85,7 +85,51 @@ body {
   ul li {
     margin-bottom: 6px;
   }
-  
+  #certifications {
+  padding: 40px 20px;
+  background-color: #f0f4f8;
+}
+
+#certifications h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.cert-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card img {
+  max-width: 80px;
+  margin-bottom: 15px;
+}
+
+.cert-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  font-size: 14px;
+  color: #555;
+}
   button, .download-btn {
     background-color: #38bdf8;
     color: #0f172a;
