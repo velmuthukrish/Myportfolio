@@ -5,7 +5,26 @@ body {
     color: #f8fafc;
     padding: 0 20px;
   }
-  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .skill-card, .card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .skill-card:hover, .card:hover {
+    transform: translateY(-5px);
+  }
+  .skill-card img, .card img {
+    width: 48px;
+    margin-bottom: 10px;
+  }
   .container {
     max-width: 900px;
     margin: 0 auto;
