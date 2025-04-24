@@ -1,80 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Velkumaresan Muthukrishnan | Azure Cloud & IT Leader</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velkumaresan M. | Azure Cloud Specialist</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button class="toggle-theme" onclick="document.body.classList.toggle('tech-mode')">Toggle Theme</button>
+
   <header>
-    <div class="container">
-      <h1>Velkumaresan Muthukrishnan</h1>
-      <p>Azure Cloud Specialist | IT Infrastructure Leader | Solutions Architect</p>
-      <a class="btn" href="mailto:velkumaresanmuthukrish@gmail.com"><i class="fas fa-envelope"></i> Email Me</a>
-      <a class="btn whatsapp" href="https://wa.me/919176001942" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    </div>
+    <h1>Velkumaresan Muthukrishnan</h1>
+    <h2>Azure Cloud | DevOps | IT Infrastructure Specialist</h2>
   </header>
 
-  <section class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Experienced Server, Networking, and Infrastructure Administrator with a demonstrated history of working in high-pressure IT environments. Proven expertise in Azure, On-Premise solutions, and project leadership, currently serving as Team Lead at Dynamic Computer Service.</p>
-      <p>Hands-on in managing cloud migrations, monitoring tools, disaster recovery strategies, virtualization, and cost optimization within the Azure ecosystem. Passionate about delivering scalable, secure, and performance-optimized IT infrastructure solutions.</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m an experienced Azure Cloud Engineer with a passion for automation, scalability, and cloud-native architecture. Currently working as Sr. Team Lead at a leading IT firm, I help organizations streamline their infrastructure and security operations on Azure.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="card"><h3>Azure</h3><p>Infrastructure, Security, DevOps</p></div>
+      <div class="card"><h3>DevOps</h3><p>Terraform, GitHub Actions, CI/CD</p></div>
+      <div class="card"><h3>Automation</h3><p>PowerShell, Shell, Python scripting</p></div>
+      <div class="card"><h3>OS & Servers</h3><p>Windows/Linux, IIS, AD, DNS, DHCP</p></div>
+      <div class="card"><h3>Security</h3><p>Azure Defender, Firewalls, DLP</p></div>
+      <div class="card"><h3>Monitoring</h3><p>Azure Monitor, Sentinel, Log Analytics</p></div>
     </div>
   </section>
 
-  <section class="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul>
-        <li>Azure & Cloud Infrastructure</li>
-        <li>Networking & Virtualization</li>
-        <li>Project Management & Agile</li>
-        <li>Customer Relationship Management</li>
-        <li>System Troubleshooting</li>
-        <li>DevOps (Azure DevOps)</li>
-        <li>Hardware & Software Installation</li>
-        <li>Security & Disaster Recovery</li>
-      </ul>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Azure Landing Zone Deployment</h3>
+        <p>Designed and deployed secure Azure landing zones using Terraform across multiple environments.</p>
+      </div>
+      <div class="card">
+        <h3>DevOps Automation</h3>
+        <p>Created CI/CD pipelines with GitHub Actions, integrated with Azure Functions and Logic Apps.</p>
+      </div>
+      <div class="card">
+        <h3>Sentinel SIEM Integration</h3>
+        <p>Automated log ingestion and alerting rules across hybrid environments to improve security insights.</p>
+      </div>
     </div>
   </section>
 
-  <section class="experience">
-    <div class="container">
-      <h2>Professional Experience</h2>
-      <div class="job">
-        <h3>Team Lead - Tech Service</h3>
-        <span>Dynamic Computer Service, Chennai (Sep 2023 - Present)</span>
-        <ul>
-          <li>Leading cross-functional Azure projects and infrastructure management.</li>
-          <li>Provided 2nd and 3rd level support, monitoring, and performance optimization in Azure.</li>
-          <li>Implemented resource allocation strategies and client-focused cloud solutions.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <h3>Senior Solutions Engineer (Azure & On-Prem)</h3>
-        <span>Dynamic Computer Service (Oct 2021 - Sep 2023)</span>
-        <ul>
-          <li>Designed and deployed scalable cloud and on-prem solutions.</li>
-          <li>Managed Azure services, including Blob Storage, Site Recovery, and Active Directory.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <h3>Solutions Architect & Programmer</h3>
-        <span>MGK Infotech (May 2014 - Sep 2019)</span>
-        <ul>
-          <li>Built and maintained virtual networks, managed VMs, and led IT infrastructure projects.</li>
-        </ul>
-      </div>
-    </div>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:velkumaresanmuthu@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Email</button>
+    </form>
+    <br>
+    <a href="https://wa.me/919345059051" class="whatsapp-button" target="_blank">Message Me on WhatsApp</a>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Velkumaresan Muthukrishnan. All Rights Reserved.</p>
-    </div>
+    <p>&copy; 2025 Velkumaresan M. | Azure Cloud Specialist</p>
   </footer>
+
 </body>
 </html>
